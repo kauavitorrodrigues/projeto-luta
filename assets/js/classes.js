@@ -77,7 +77,7 @@ class BigMonster extends Character {
 
     // Cria o constructor para atribuir os valores as propriedades do objeto
     constructor() {
-        super('Big Monster')
+        super('Kinshiki')
         this.life = 120
         this.maxLife = this.life
         this.attack = 16
@@ -155,10 +155,10 @@ class Stage {
         // Verifica se hove dano ao atacado
         if (actualAttack > actualDefense) {
             attacked.life -= actualAttack // Subtraí a vida do atacado pelo dano de ataque causado
-            this.log.addMessage(`${attacked.name} sofreu um ataque e causou ${actualAttack} de dano`)
+            this.log.addMessage(`ﾒ ${attacked.name} ﾒ causou ${actualAttack} de dano`)
 
         } else {
-            this.log.addMessage(`${attacked.name} conseguiu se defender`)
+            this.log.addMessage(`ﾒ ${attacked.name} ﾒ conseguiu se defender`)
         }
 
         // Executa a função update para atualizar as alterações ocorridas pelo método doAttack

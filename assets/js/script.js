@@ -1,6 +1,6 @@
 let log = new Log(document.querySelector('.log'))
 
-let char = new Samurai('John')
+let char = new Samurai('Todoroki')
 let monster = new BigMonster()
 
 const stage = new Stage(

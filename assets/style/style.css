@@ -3,7 +3,9 @@
 }
 
 body {
-    background-color: rgb(153, 153, 153);
+    background-image: url(/assets/img/BG.png);
+    background-size: cover;
+    background-position: bottom;
 }
 
 .fight-container {
@@ -16,7 +18,7 @@ body {
 
 .fight-area {
     display: flex;
-    height: 400px;
+    height: 500px;
     width: 50%;
 }
 
@@ -35,7 +37,7 @@ body {
     height: 10px;
     width: 200px;
     margin-bottom: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(99, 99, 99);
     border-radius: 10px;
     background-color: white;
 }
@@ -47,8 +49,20 @@ body {
     background-color: red;
 }
 
-.image img {
-    width: 250px;
+.name {
+    color: white;
+}
+
+.hero {
+    width: 300px;
+}
+
+.hero {
+    transform: scaleX(-1);
+}
+
+.monster {
+    width: 337px;
 }
 
 .button {
@@ -62,12 +76,12 @@ body {
     border-radius: 20px;
     transition: .8s all ease;
     background-color: white;
-    box-shadow: 2px 1px 20px 0px #a3a3a3;
+    box-shadow: 2px 1px 20px 0px #383838;
 }
 
 .button button:hover {
     color: white;
-    background-color: #383838;
+    background-color: #858585;
 }
 
 .button button p {
@@ -83,4 +97,12 @@ body {
     width: 750px;
     height: 200px;
     overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.log-area ul li {
+    list-style-type: none;
 }
