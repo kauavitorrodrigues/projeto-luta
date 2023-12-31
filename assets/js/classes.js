@@ -123,12 +123,12 @@ class Stage {
     update() {
 
         // Personagem 1
-        this.fighter1EL.querySelector('.name').innerHTML = `${this.fighter1.name} - ${this.fighter1.life} HP` // Exibe o nome e a quantidade de vida do personagem 1
+        this.fighter1EL.querySelector('.name').innerHTML = `${this.fighter1.name} - ${this.fighter1.life.toFixed(1)} HP` // Exibe o nome e a quantidade de vida do personagem 1
         let f1Pct = (this.fighter1.life / this.fighter1.maxLife * 100) // Calcula a quantidade de vida do personagem 1 em porcentagem
         this.fighter1EL.querySelector('.bar').style.width = `${f1Pct}%` // Define o tamanho da LifeBar (CSS) em relação a porcentagem de vida do personagem 1
 
         // Personagem 2
-        this.fighter2EL.querySelector('.name').innerHTML = `${this.fighter2.name} - ${this.fighter2.life} HP` // Exibe o nome e a quantidade de vida do personagem 2
+        this.fighter2EL.querySelector('.name').innerHTML = `${this.fighter2.name} - ${this.fighter2.life.toFixed(1)} HP` // Exibe o nome e a quantidade de vida do personagem 2
         let f2Pct = (this.fighter2.life / this.fighter2.maxLife * 100) // Calcula a quantidade de vida do personagem 2 em porcentagem
         this.fighter2EL.querySelector('.bar').style.width = `${f2Pct}%` // Define o tamanho da LifeBar (CSS) em relação a porcentagem de vida do personagem 2
 
@@ -136,8 +136,33 @@ class Stage {
 
     // Função que executa um ataque, tendo como parâmetro quem efetuou o ataque e quem recebeu
     doAttack(attacking, attacked) {
-        console.log(`${attacking.name} ataca ${attacked.name}`)
+
+        // Verifica se o algum dos lutadores está sem vida
+        if (attacking.life <= 0 || attacked.life <= 0) {
+            console.log('Atacando cachorro morto') // Cessa os ataques e dá um aviso
+            return
+        }
+
+        // Cria um fator de ataque baseado em um número decimal aleatório
+        let attackFactor = (Math.random() * 2).toFixed(2)
+        let actualAttack = (attacking.attack * attackFactor).toFixed(1)
+
+        // Cria um fator de defesa baseado em um número decimal aleatório
+        let defenseFactor = (Math.random() * 2).toFixed(2)
+        let actualDefense = (attacked.defense * defenseFactor).toFixed(1)
+
+        // Verifica se hove dano ao atacado
+        if (actualAttack > actualDefense) {
+            attacked.life -= actualAttack // Subtraí a vida do atacado pelo dano de ataque causado
+            console.log(`${attacked.name} sofreu um ataque e causou ${actualAttack} de dano`)
+
+        } else {
+            console.log(`${attacked.name} conseguiu se defender`)
+        }
+
+        // Executa a função update para atualizar as alterações ocorridas pelo método doAttack
         this.update()
+
     }
 
 }
