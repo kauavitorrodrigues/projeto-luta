@@ -24,6 +24,29 @@ Este é um projeto de página web que simula a luta entre dois personagens utili
 3. Selecione os personagens para iniciar a simulação de luta.
 4. Utilize os controles especificados na página para interagir com a simulação.
 
+### Créditos e Agradecimentos
+
+### Elementos Visuais Adicionais
+
+#### Cenário
+
+- Artista: [Lennart Butz](https://www.artstation.com/lennartbutz)
+- Link para a obra específica utilizada: [ArtStation - Portfólio](https://www.artstation.com/artwork/Z5yNYX)
+
+### Arte dos Personagens
+
+#### Samurai
+
+- Artista: [William Rodriguez](https://www.artstation.com/william_rodriguez)
+- Link para a obra específica utilizada: [ArtStation - Portfólio](https://www.artstation.com/artwork/Wmkgmy)
+
+#### Monstro
+
+- Coleção no Pinterest por [Kyliann Explorateur](https://pinterest.com/kyliannexplorateur/)
+- Link para a coleção específica utilizada: [Pinterest - Coleção](https://pinterest.com/pin/597008494374500139/)
+
+#### **Meus sinceros agradecimentos aos talentosos artistas Kyliann Explorateur e William Rodriguez por suas impressionantes obras de arte, assim como a Lennart Butz pela coleção visual adicional fornecida.**
+
 ---
 
 ## English / Inglês
@@ -49,11 +72,32 @@ This is a web page project that simulates a battle between two characters using 
 3. Select the characters to start the fight simulation.
 4. Use the specified controls on the page to interact with the simulation.
 
+### Credits and Acknowledgments
+
+### Additional Visual Elements
+
+#### Setting
+
+- Artist: [Lennart Butz](https://www.artstation.com/lennartbutz)
+- Link to the specific artwork used: [ArtStation - Portfolio](https://www.artstation.com/artwork/Z5yNYX)
+
+### Character Art
+
+#### Samurai
+
+- Artist: [William Rodriguez](https://www.artstation.com/william_rodriguez)
+- Link to the specific artwork used: [ArtStation - Portfolio](https://www.artstation.com/artwork/Wmkgmy)
+
+#### Monster
+
+- Collection on Pinterest by [Kyliann Explorateur](https://pinterest.com/kyliannexplorateur/)
+- Link to the specific collection used: [Pinterest - Collection](https://pinterest.com/pin/597008494374500139/)
+
+#### **My heartfelt thanks to the talented artists Kyliann Explorateur and William Rodriguez for their impressive artworks, as well as to Lennart Butz for the additional visual collection provided.**
+
 ---
 
-## Contato / Contact
+# Contato / Contact
 
 - **Nome / Name:** Kauã Vitor Rodrigues
 - **E-mail:** kvrfz.psrnl@gmail.com
-
----

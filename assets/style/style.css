@@ -3,23 +3,29 @@
 }
 
 body {
-    background-image: url(/assets/img/BG.png);
+    background-image: url(/assets/img/BG.gif);
     background-size: cover;
-    background-position: bottom;
+    background-position: top center; 
 }
 
 .fight-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: calc(100vh - 20px);
+    justify-content: center;
+    height: 97vh;
+}
+
+.fight-display {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .fight-area {
     display: flex;
-    height: 500px;
-    width: 50%;
 }
 
 #char, #monster {
@@ -29,14 +35,14 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-
 
 .life-bar {
     height: 10px;
     width: 200px;
-    margin-bottom: 20px;
+
     border: 1px solid rgb(99, 99, 99);
     border-radius: 10px;
     background-color: white;
@@ -51,32 +57,42 @@ body {
 
 .name {
     color: white;
+    margin-bottom: 10px;
 }
 
-.hero {
+.image {
+    height: 300px;
+}
+
+.image img {
     width: 300px;
+    height: 300px;
 }
 
-.hero {
+.hero, .monster {
     transform: scaleX(-1);
 }
 
-.monster {
-    width: 337px;
-}
-
 .button {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .button button {
     width: 250px;
+    height: 30px;
     border: 0;
     cursor: pointer;
     border-radius: 20px;
     transition: .8s all ease;
     background-color: white;
     box-shadow: 2px 1px 20px 0px #383838;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.button button p {
+    padding: 10px;
 }
 
 .button button:hover {
@@ -84,25 +100,38 @@ body {
     background-color: #858585;
 }
 
-.button button p {
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.log-area {
-    margin-top: 40px;
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 10px 0px 0px 10px;
-    width: 750px;
-    height: 200px;
-    overflow-y: scroll;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
 .log-area ul li {
     list-style-type: none;
 }
+
+.log {
+    padding: 0;
+}
+
+.log-area {
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    background-color: white;
+    
+    border: 1px solid lightgray;
+    overflow-y: scroll;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-area::-webkit-scrollbar {
+    width: 5px; 
+}
+
+.log-area::-webkit-scrollbar-track {
+    background: #999;        /* color of the tracking area */
+}
+
+.log-area::-webkit-scrollbar-thumb {
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #333;  /* creates padding around scroll thumb */
+}
+ 

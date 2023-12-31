@@ -63,7 +63,7 @@ class LittleMonster extends Character {
 
     // Cria o constructor para atribuir os valores as propriedades do objeto
     constructor() {
-        super('Little Monster')
+        super('Kirishima')
         this.life = 40
         this.maxLife = this.life
         this.attack = 4
@@ -77,7 +77,7 @@ class BigMonster extends Character {
 
     // Cria o constructor para atribuir os valores as propriedades do objeto
     constructor() {
-        super('Kinshiki')
+        super('Kirishima')
         this.life = 120
         this.maxLife = this.life
         this.attack = 16
@@ -139,8 +139,11 @@ class Stage {
     doAttack(attacking, attacked) {
 
         // Verifica se o algum dos lutadores está sem vida
-        if (attacking.life <= 0 || attacked.life <= 0) {
-            this.log.addMessage(`${attacked.name} já está morto`) // Cessa os ataques e dá um aviso
+        if (attacking.life <= 0) {
+            this.log.addMessage(`- FIM DA LUTA - ﾒ ${attacking.name} ﾒ está morto`) // Cessa os ataques e dá um aviso
+            return
+        } else if (attacked.life <= 0) {
+            this.log.addMessage(`- FIM DA LUTA - ﾒ ${attacked.name} ﾒ está morto`) // Cessa os ataques e dá um aviso
             return
         }
 
@@ -155,10 +158,10 @@ class Stage {
         // Verifica se hove dano ao atacado
         if (actualAttack > actualDefense) {
             attacked.life -= actualAttack // Subtraí a vida do atacado pelo dano de ataque causado
-            this.log.addMessage(`ﾒ ${attacked.name} ﾒ causou ${actualAttack} de dano`)
+            this.log.addMessage(`ﾒ ${attacking.name} ﾒ conseguiu causar ${actualAttack} de dano a ${attacked.name}`)
 
         } else {
-            this.log.addMessage(`ﾒ ${attacked.name} ﾒ conseguiu se defender`)
+            this.log.addMessage(`ﾒ ${attacked.name} ﾒ conseguiu parar ${actualDefense} de dano de ${attacking.name}`)
         }
 
         // Executa a função update para atualizar as alterações ocorridas pelo método doAttack
@@ -171,26 +174,29 @@ class Stage {
 // Criação da class Log para exibir as informações do combate na tela
 class Log {
 
-    list = []
+    list = [] // Array para armazenar mensagens
 
     constructor(listEl) {
-        this.listEl = listEl
+        this.listEl = listEl // Elemento HTML onde as mensagens serão exibidas
     }
 
+    // Método para adicionar mensagem a lista
     addMessage(msg) {
 
-        //
+        // Adiciona a mensagem à lista
         this.list.push(msg)
 
-        //
+        // Chama a função de renderização para atualizar a exibição
         this.render()
 
     }
 
+    // Método para exibir a lista no log
     render() {
         
-        this.listEl.innerHTML = ''
+        this.listEl.innerHTML = '' // Limpa o conteúdo do elemento HTML
 
+        // Itera sobre cada mensagem na lista e cria um item de lista HTML para cada uma
         for (let i in this.list) {
             this.listEl.innerHTML += `<li>${this.list[i]}</li>`
         }
