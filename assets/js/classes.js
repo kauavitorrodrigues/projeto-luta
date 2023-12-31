@@ -95,11 +95,12 @@ class Stage {
         - Constructor que cria os lutadores
         - Atribuí como lutadores os personagens (Criados pela classe Character) passados como parâmetro ao chamar a classe
     */
-    constructor(fighter1, fighter2, fighter1EL, fighter2EL) {
+    constructor(fighter1, fighter2, fighter1EL, fighter2EL, logObject) {
         this.fighter1 = fighter1
         this.fighter2 = fighter2
         this.fighter1EL = fighter1EL
         this.fighter2EL = fighter2EL
+        this.log = logObject
     }
 
     // Função que executa os métodos de interação ao utilizar a classe (Inicia o jogo)
@@ -139,7 +140,7 @@ class Stage {
 
         // Verifica se o algum dos lutadores está sem vida
         if (attacking.life <= 0 || attacked.life <= 0) {
-            console.log('Atacando cachorro morto') // Cessa os ataques e dá um aviso
+            this.log.addMessage(`${attacked.name} já está morto`) // Cessa os ataques e dá um aviso
             return
         }
 
@@ -154,14 +155,45 @@ class Stage {
         // Verifica se hove dano ao atacado
         if (actualAttack > actualDefense) {
             attacked.life -= actualAttack // Subtraí a vida do atacado pelo dano de ataque causado
-            console.log(`${attacked.name} sofreu um ataque e causou ${actualAttack} de dano`)
+            this.log.addMessage(`${attacked.name} sofreu um ataque e causou ${actualAttack} de dano`)
 
         } else {
-            console.log(`${attacked.name} conseguiu se defender`)
+            this.log.addMessage(`${attacked.name} conseguiu se defender`)
         }
 
         // Executa a função update para atualizar as alterações ocorridas pelo método doAttack
         this.update()
+
+    }
+
+}
+
+// Criação da class Log para exibir as informações do combate na tela
+class Log {
+
+    list = []
+
+    constructor(listEl) {
+        this.listEl = listEl
+    }
+
+    addMessage(msg) {
+
+        //
+        this.list.push(msg)
+
+        //
+        this.render()
+
+    }
+
+    render() {
+        
+        this.listEl.innerHTML = ''
+
+        for (let i in this.list) {
+            this.listEl.innerHTML += `<li>${this.list[i]}</li>`
+        }
 
     }
 
