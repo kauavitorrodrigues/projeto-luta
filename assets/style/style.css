@@ -68,6 +68,16 @@ body {
     background-color: #333;
 }
 
+.button .startButton {
+    background-color: #333;
+    color: white;
+}
+
+.button .startButton:hover {
+    background-color: #444444;
+    color: white;
+}
+
 /*--------FIGHT-AREA-STYLE--------*/
 
 .fight-container {
@@ -150,6 +160,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
+    transition-duration: .5s;
 }
 
 .button button p {
