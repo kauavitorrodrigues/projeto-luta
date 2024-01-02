@@ -40,10 +40,20 @@ Este é um projeto de página web que simula a luta entre dois personagens utili
 - Artista: [William Rodriguez](https://www.artstation.com/william_rodriguez)
 - Link para a obra específica utilizada: [ArtStation - Portfólio](https://www.artstation.com/artwork/Wmkgmy)
 
-#### Monstro
+### Mago
+
+- Artista: [StefaniaMak](https://www.deviantart.com/stefaniamak/gallery)
+- Link para a obra específica utilizada: [ArtStation - Portfólio](https://www.deviantart.com/stefaniamak/art/Idle-Pixel-Art-Animation-of-a-Mage-834643553)
+
+#### Monstro pequeno
 
 - Coleção no Pinterest por [Kyliann Explorateur](https://pinterest.com/kyliannexplorateur/)
 - Link para a coleção específica utilizada: [Pinterest - Coleção](https://pinterest.com/pin/597008494374500139/)
+
+### Monstro grande
+
+- Artista: [Dow_PixelManiac](https://twitter.com/Dow_PixelManiac)
+- Link para a obra específica utilizada: [ArtStation - Portfólio](https://www.hoyolab.com/article/13944)
 
 #### **Meus sinceros agradecimentos aos talentosos artistas Kyliann Explorateur e William Rodriguez por suas impressionantes obras de arte, assim como a Lennart Butz pela coleção visual adicional fornecida.**
 
