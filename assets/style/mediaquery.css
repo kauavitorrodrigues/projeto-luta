@@ -1,6 +1,15 @@
 /* Telas menores */
 @media screen and (max-width: 450px) {
 
+    .choose-char {
+        flex-direction: column;
+    }
+
+    .choose-hero {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
     .fight-area {
         display: block;
     }
@@ -25,15 +34,37 @@
         width: 135px;
     }
 
+    .choose-desc {
+        margin-bottom: 10px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    .choose-name {
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: #333;
+        margin-top: 10px;
+    }
+
+    .choose-desc p {
+        padding: 10px;
+        font-weight: bolder;
+        color: #333;
+    }
+
+    .choose-hero .button, .choose-monster .button {
+        margin-top: 7px;
+    }
+
+    .choose-hero .button, .choose-monster .button {
+        margin-bottom: 5px;
+    }
+
     .button button {
-        width: 150px;
-        height: 30px;
-        border: 0;
-        cursor: pointer;
-        border-radius: 20px;
-        transition: .8s all ease;
-        background-color: white;
-        box-shadow: 2px 1px 20px 0px #383838;
+        width: 190px;
     }
     
     #char .attackButton {

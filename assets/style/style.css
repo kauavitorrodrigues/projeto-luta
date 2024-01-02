@@ -1,5 +1,8 @@
+/*----------DEFAULT-STYLE----------*/
+
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 1s all ease;
 }
 
 body {
@@ -8,8 +11,67 @@ body {
     background-position: top center; 
 }
 
-.fight-container {
+/*-----CHOOSE-CHARACTER-STYLE------*/
+
+.choose-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 97vh;
+}
+
+.choose-desc {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+.choose-desc p {
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bolder;
+    color: #333;
+}
+
+.choose-name {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.choose-char {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose-monster, .choose-hero {
+    flex: 1;
+}
+
+.choose-hero {
+    margin-right: 30px;
+}
+
+.choose-image {
+    background-color: #33333328;
+    border: 1px solid #333;
+    padding: 0px 5px 25px 5px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.choose-name {
+    text-align: center;
+    padding: 10px 50px;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+/*--------FIGHT-AREA-STYLE--------*/
+
+.fight-container {
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -79,11 +141,10 @@ body {
 
 .button button {
     width: 250px;
-    height: 30px;
+    height: 35px;
     border: 0;
     cursor: pointer;
     border-radius: 20px;
-    transition: .8s all ease;
     background-color: white;
     box-shadow: 2px 1px 20px 0px #383838;
     text-align: center;
