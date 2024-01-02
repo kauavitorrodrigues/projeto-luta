@@ -77,7 +77,7 @@ class BigMonster extends Character {
 
     // Cria o constructor para atribuir os valores as propriedades do objeto
     constructor() {
-        super('Kirishima')
+        super('Groshlorn')
         this.life = 120
         this.maxLife = this.life
         this.attack = 16
@@ -95,12 +95,22 @@ class Stage {
         - Constructor que cria os lutadores
         - Atribuí como lutadores os personagens (Criados pela classe Character) passados como parâmetro ao chamar a classe
     */
-    constructor(fighter1, fighter2, fighter1EL, fighter2EL, logObject) {
-        this.fighter1 = fighter1
-        this.fighter2 = fighter2
+    constructor(fighter1EL, fighter2EL, logObject) {
+        this.fighter1 = null
+        this.fighter2 = null
         this.fighter1EL = fighter1EL
         this.fighter2EL = fighter2EL
         this.log = logObject
+    }
+
+    // Função que altera o elemento quando chamada recebendo como parâmetro o objeto do herói
+    addHero(fighter1) {
+        this.fighter1 = fighter1
+    }
+
+    // Função que altera o elemento quando chamada recebendo como parâmetro o objeto do monstro
+    addMonster(fighter2) {
+        this.fighter2 = fighter2
     }
 
     // Função que executa os métodos de interação ao utilizar a classe (Inicia o jogo)

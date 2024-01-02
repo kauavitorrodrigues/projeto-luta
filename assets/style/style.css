@@ -59,6 +59,13 @@ body {
     padding: 0px 5px 25px 5px;
     border-radius: 20px;
     margin-bottom: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.hidden-hero, .hidden-monster {
+    opacity: 0;
+    transition-duration: .4s;
 }
 
 .choose-name {
@@ -139,10 +146,6 @@ body {
 .image img {
     width: 300px;
     height: 300px;
-}
-
-.hero, .monster {
-    transform: scaleX(-1);
 }
 
 .button {
